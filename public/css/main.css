@@ -1,0 +1,31 @@
+/*Folha de estilos principal*/
+
+/*Reset básico do CSS*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elemento root*/
+:root {
+    /*Font padrão do elemento root configurada pelo Google Chrome: 16px*/
+    font-size: 62.5%; /*Tamanho: 10px*/
+}
+
+/*Configurações gerais*/
+body {
+    color: white;
+    height: 100vh;
+}
+
+body, input, button, textarea {
+    /*
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    */
+
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+}

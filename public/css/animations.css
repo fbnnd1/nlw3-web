@@ -1,0 +1,16 @@
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: transate(16px);
+    }
+    to {
+        opacity: 1;
+        transform: transate(0);
+    }
+}
+
+.animated-up {
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-fill-mode: backwards;
+}
