@@ -17,6 +17,7 @@
 body {
     color: white;
     height: 100vh;
+    background: #EBF2F5;
 }
 
 body, input, button, textarea {
