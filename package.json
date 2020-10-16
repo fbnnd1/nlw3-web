@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Este repositório faz parte do projeto Happy, desenvolvido durante a <a href=\"https://nextlevelweek.com/inscricao/3/\" target=\"_blank\">Next Level Week #3</a> promovida pela <a href=\"https://rocketseat.com.br\" target=\"_blank\">RocketSeat</a>.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbnnd1/nlw3-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fbnnd1/nlw3-web/issues"
+  },
+  "homepage": "https://github.com/fbnnd1/nlw3-web#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}
