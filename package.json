@@ -20,6 +20,7 @@
   "homepage": "https://github.com/fbnnd1/nlw3-web#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.1"
+    "hbs": "^4.1.1",
+    "sqlite-async": "^1.1.0"
   }
 }

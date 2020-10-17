@@ -3,3 +3,9 @@
 
 #Log files
 npm-debug.log*
+
+#Arquivo de dados
+/src/database/database.sqlite
+
+#Arquivo de dados fake
+/src/database/fakedata-sample.js

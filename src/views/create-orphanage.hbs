@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
 
             </aside>
             <main class="animated-appear with-sidebar">
-                <form action="">
+                <form action="/save-orphanage" method="POST">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="map-container">
@@ -49,7 +49,7 @@
                             <input type="hidden" name="lat">
                             <input type="hidden" name="lng">
                             <footer>
-                                <a href="">Ver rotas no Google Maps</a>
+                                <a>Clique no mapa para adicionar a localização</a>
                             </footer>
                         </div>
 
@@ -76,6 +76,7 @@
                                     <input name="images"
                                         placeholder="Cole o link da foto aqui"
                                         required
+                                        type="url"
                                     />
                                     <span onclick="deleteField(event)">
                                         <img alt="Remover Foto" src="/images/remove-file.svg" />
@@ -93,8 +94,8 @@
                         <legend>Visitação</legend>
 
                         <div class="input-block">
-                            <label for="instruction">Instruções</label>
-                            <textarea id="instruction" name="instruction" required></textarea>
+                            <label for="instructions">Instruções</label>
+                            <textarea id="instructions" name="instructions" required></textarea>
                         </div>
 
                         <div class="input-block">
@@ -103,8 +104,8 @@
                         </div>
 
                         <div class="input-block">
-                            <label for="open_on_weekend">Atende fim de semana</label>
-                            <input type="hidden" id="open_on_weekend" name="open_on_weekend" value="1" required>
+                            <label for="open_on_weekends">Atende fim de semana</label>
+                            <input type="hidden" id="open_on_weekends" name="open_on_weekends" value="1" required>
      
                             <div class="button-select">
                                 <button data-value="1" onclick="toggleSelect(event)" type="button" class="active">Sim</button>

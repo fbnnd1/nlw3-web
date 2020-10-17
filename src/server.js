@@ -11,6 +11,8 @@ const pages = require('./pages.js');
 const server = express();
 
 server
+    //utilizar o body no objeto requisição
+    .use(express.urlencoded({extended: true}))
     //utilizando os arquivos estatísticos
     .use(express.static('public'))
 
@@ -22,7 +24,8 @@ server
     .get('/', pages.index)
     .get('/orphanage', pages.orphanage)
     .get('/orphanages', pages.orphanages)
-    .get('/create-orphanage', pages.createOrphanage);
+    .get('/create-orphanage', pages.createOrphanage)
+    .post('/save-orphanage', pages.saveOrphanage);
 
 server.listen(8080);
 console.log("Servidor local funcionando na porta 8080");
