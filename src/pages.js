@@ -3,6 +3,7 @@
 //Importando meios de acesso aos dados
 const Database = require('./database/db');
 const saveOrphanage = require("./database/saveOrphanage.js");
+const registerLogs = require("./register-logs.js");
 
 module.exports = {
     index(req, res) {
@@ -33,6 +34,8 @@ module.exports = {
 
         } catch(error) {
             console.log(error);
+            //Registrando log de erro
+            registerLogs("D1", error.toString());
             return res.send("Erro no banco de dados");
         }
 
@@ -46,6 +49,8 @@ module.exports = {
         
         } catch(error) {
             console.log(error);
+            //Registrando log de erro
+            registerLogs("D1", error.toString());
             return res.send("Erro no banco de dados");
         }
     },
@@ -84,6 +89,8 @@ module.exports = {
 
         } catch(error) {
             console.log(error);
+            //Registrando log de erro
+            registerLogs("D2", error.toString());
             return res.send("Erro no banco de dados");
         }
     }

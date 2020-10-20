@@ -2,10 +2,14 @@
 /node_modules
 
 #Log files
-npm-debug.log*
+npm-debug.log
+/logs
 
 #Arquivo de dados
-/src/database/database.sqlite
+/database/database.sqlite
 
 #Arquivo de dados fake
 /src/database/fakedata-sample.js
+
+#Arquivo de teste
+/src/teste.js
