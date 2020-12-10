@@ -36,7 +36,8 @@ module.exports = {
             console.log(error);
             //Registrando log de erro
             registerLogs("D1", error.toString());
-            return res.send("Erro no banco de dados");
+            //return res.send("Erro no banco de dados");
+            return res.redirect('/error-msg');
         }
 
     },
@@ -51,7 +52,8 @@ module.exports = {
             console.log(error);
             //Registrando log de erro
             registerLogs("D1", error.toString());
-            return res.send("Erro no banco de dados");
+            //return res.send("Erro no banco de dados");
+            return res.redirect('/error-msg');
         }
     },
     createOrphanage(req, res) {
@@ -91,7 +93,22 @@ module.exports = {
             console.log(error);
             //Registrando log de erro
             registerLogs("D2", error.toString());
-            return res.send("Erro no banco de dados");
+            //return res.send("Erro no banco de dados");
+            return res.redirect('/error-msg');
+        }
+    },
+    pageError(req, res) {
+        if (req.accepts('html')) {
+            const errorMsg = {msg:"Erro no banco de dados."};
+            res.render('error', {errorMsg} );
+            return;
+        }
+    },
+    pageNotFound(req, res) { //Página não localizada
+        if (req.accepts('html')) {
+            const errorMsg = {msg:"Página ou recurso não localizado!"};
+            res.render('error', {errorMsg} );
+            return;
         }
     }
 };

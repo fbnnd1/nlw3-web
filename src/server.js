@@ -15,7 +15,7 @@ server
     .use(express.urlencoded({extended: true}))
     //utilizando os arquivos estatísticos
     .use(express.static('public'))
-
+    
     //Configurar template engine
     .set('views', path.join(__dirname, "views"))
     .set('view engine', 'hbs')
@@ -25,7 +25,13 @@ server
     .get('/orphanage', pages.orphanage)
     .get('/orphanages', pages.orphanages)
     .get('/create-orphanage', pages.createOrphanage)
-    .post('/save-orphanage', pages.saveOrphanage);
+    .post('/save-orphanage', pages.saveOrphanage)
+
+    //Rota para página que exibe mensagens no caso de erro
+    .get('/error-msg', pages.pageError)
+
+    //Para demais rotas não configuradas
+    .get('*', pages.pageNotFound );
 
 server.listen(8080);
 console.log("Servidor local funcionando na porta 8080");

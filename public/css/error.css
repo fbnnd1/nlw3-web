@@ -1,0 +1,45 @@
+body, main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+    
+    flex-direction: column;
+
+    height:100%;
+    width:100%;
+}
+
+.msg-user {
+    font-size: 2rem;
+    text-align:center;
+
+    margin-top: 1rem;
+}
+
+.msg-user p {
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.botao-voltar {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 1.6rem;
+    cursor: pointer;
+
+    background: #12AFCB;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s;
+}
+
+.botao-voltar:hover {
+    background: #17D6EB;
+}
