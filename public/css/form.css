@@ -10,6 +10,10 @@ form {
     padding: 8rem;
 }
 
+@media (max-width: 800px) {
+    form { width: auto; }
+}
+
 fieldset {
     border: 0;
 }

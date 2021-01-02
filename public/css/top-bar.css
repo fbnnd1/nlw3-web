@@ -1,0 +1,33 @@
+.top-bar {
+    background: linear-gradient(0deg, #1586D6 0%, #15D6D6 100%);
+    display: none;
+    width:100%;
+}
+
+.top-bar #logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.top-bar h3 {
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
+
+/*Breakpoint: Telas até 800px de largura*/
+@media (max-width: 800px) {
+    /*Exibindo barra do topo*/
+    .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width:100%;
+    }
+
+    .top-bar .back-button {
+        position: absolute;
+        left:1rem;
+        top:1.5rem; 
+    }
+}

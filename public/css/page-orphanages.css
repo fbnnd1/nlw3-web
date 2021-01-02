@@ -17,6 +17,22 @@ aside {
 
 }
 
+/*Breakpoint: Telas até 800px de largura*/
+@media (max-width: 800px) {
+    #page-orphanages {
+        flex-direction: column;
+    }
+    /*Ocultando barra lateral*/
+    #aside-right-bar {
+        display:none;
+    }
+    /*barra do topo*/
+    .top-bar {
+        flex-direction: column;
+    }
+}
+
+
 aside h2 {
     margin-top: 6.4rem;
     font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;

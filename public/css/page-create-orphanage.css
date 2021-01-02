@@ -7,6 +7,27 @@ main {
     flex: 1;
 }
 
+/*Breakpoint: Telas até 800px de largura*/
+@media (max-width: 800px) {
+    #page-create-orphanage {
+        flex-direction: column;
+        width:100%;
+    }
+
+    main {
+        width: 100%;
+    }
+    /*Ocultando barra lateral*/
+    aside.sidebar {
+        display:none;
+    }
+    
+    .with-sidebar {
+        padding-left: 0px;
+    }
+    
+}
+
 .map-container {
     margin: 0 0 4rem;
 }

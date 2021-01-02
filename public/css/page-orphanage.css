@@ -7,6 +7,27 @@ main {
     flex: 1;
 }
 
+/*Breakpoint: Telas até 800px de largura*/
+@media (max-width: 800px) {
+    #page-orphanage {
+        flex-direction: column;
+        width:100%;
+    }
+
+    main {
+        width: 100%;
+    }
+    /*Ocultando barra lateral*/
+    aside.sidebar {
+        display:none;
+    }
+    
+    .with-sidebar {
+        padding-left: 0px;
+    }
+    
+}
+
 /*Details*/
 .orphanage-details {
     width: 70rem;
@@ -134,4 +155,48 @@ main {
     background: linear-gradient(154.16deg, #FCF0F4 7.85%, #FFFFFF 91.03%);
     border: 1px solid #FFBCD4;
     color: #FF999D;
+}
+
+/*Breakpoint: Telas até 800px de largura*/
+@media (max-width: 800px) {
+    
+    /*Imagens do orfanato*/
+    .orphanage-details {
+        padding: 0 0px 0 0px;
+        width: 100%;
+    }
+
+    /*Imagens*/
+    .images {
+        row-gap: 1.6rem;
+    }
+   
+    /*Conteúdo*/
+    .orphanage-details-content {
+        padding: 2rem;
+    }
+
+    /*Seção da página: Instruções para visita*/
+    .orphanage-details-content h2 {
+        line-height: 1.2;
+    }
+
+    .open-details {
+       grid-template-columns: 1fr;
+       row-gap: 1rem;
+    }
+
+}
+
+/*Redimensionando grid de imagens de acordo com a resolução*/
+@media (max-width: 400px) {
+    .images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .images {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
