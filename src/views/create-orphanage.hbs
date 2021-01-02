@@ -49,7 +49,7 @@
 
             </aside>
             <main class="animated-appear with-sidebar">
-                <form action="/save-orphanage" method="POST">
+                <form action="/save-orphanage" method="POST" onsubmit="checkAddedLocation(event)">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="map-container">
@@ -57,7 +57,7 @@
                             <input type="hidden" name="lat">
                             <input type="hidden" name="lng">
                             <footer>
-                                <a>Clique no mapa para adicionar a localização</a>
+                                <a id="lnk_msg">Clique no mapa para adicionar a localização.</a>
                             </footer>
                         </div>
 

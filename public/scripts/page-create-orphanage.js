@@ -1,3 +1,10 @@
+/*
+Variável auxiliar de validação. 
+Seu valor é alterado para 'true' caso o usuário informe uma localização.
+*/
+let bol_addedLocation = false;
+
+//Configurando mapa
 const map = L.map('mapid').setView([-27.222633, -49.6455874], 15);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -29,9 +36,15 @@ map.on('click', (event) => {
 
     //add icon layer
     marker = L.marker([lat, lng], {icon}).addTo(map);
+
+    //First click
+    document.querySelector('#lnk_msg').innerHTML = 'Clique no mapa para alterar a localização.';
+    bol_addedLocation = true;
 });
 
-//adiciona camp ode fotos
+
+
+//adiciona campo de fotos
 function addPhotoField() {
     //pegar o container de fotos (#images)
     const container = document.querySelector("#images");
@@ -83,4 +96,12 @@ function toggleSelect(event) {
     //Atualizar o campo escondido com o valor selecionado
     const input = document.querySelector("[name=open_on_weekends]");
     input.value = button.dataset.value;
+}
+
+//Função que checa se o local do orfanato foi adicionado
+function checkAddedLocation(event) {
+    if (!bol_addedLocation) { //Caso o usuário não tenha informado a localização.
+        event.preventDefault();
+        alert('Por favor, informe a localização da instituição.');
+    }
 }
