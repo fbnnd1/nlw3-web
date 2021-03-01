@@ -77,3 +77,21 @@ Nesta 1ª versão do projeto, assume-se que somente moradores específicos terã
 
     * Node;
     * Banco de dados SQLite.
+
+## Demonstração do Site
+
+**Versão Desktop**
+
+<div style="text-align:center;">
+<a href="https://youtu.be/CeLL8Q8wS5s" target="_blank">
+<img style="width:80%" src="_docs/tela-desktop.png" alt="Demosntração da versão desktop">
+</a>
+</div>
+
+**Versão Mobile**
+
+<div style="text-align:center;">
+<a href="https://youtu.be/xB8RJ6xk8qs" target="_blank">
+<img style="width:80%" src="_docs/tela-mobile.png" alt="Demosntração da versão mobile">
+</a>
+</div>
